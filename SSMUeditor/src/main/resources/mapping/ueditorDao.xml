@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ht.dao.UeditorDAO">
+  <resultMap id="ueditorMap" type="ueditor"></resultMap>
+  <select id="queryById" resultMap="ueditorMap" parameterType="java.lang.String">
+      select * from ueditor where id = #{id}
+  </select>
+  <delete id="delete" parameterType="java.lang.String">
+        delete from ueditor where id = #{id}
+  </delete>
+  <select id="pagelist" resultMap="ueditorMap">
+        select * from ueditor
+  </select>
+  <insert id="add" parameterType="ueditor">
+        insert into ueditor (title,content) values ( #{title},#{content})
+  </insert>
+  <update id="update">
+        update ueditor
+        <set>
+            <if test="title!=null and title!=''">
+                title = #{title},
+            </if>
+            <if test="content!='' and content!=''">
+                content = #{content},
+            </if>
+        </set>
+        where id = #{id}
+  </update>
+</mapper>

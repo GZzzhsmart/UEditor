@@ -1,0 +1,16 @@
+1、登录ueditor官网下载jsp-utf-8版本的ueditor
+2、找到下载后ueditor目录里面的jsp目录下的的lib目录，把5个jar包部署到WEB-INF/lib下
+3、新建一个jsp页面,引入如下js文件，即本项目中的web根目录下的index.jsp文件
+        1）<script type="text/javascript" charset="utf-8" src="ueditor.config.js"></script>
+        2）<script type="text/javascript" charset="utf-8" src="ueditor.all.min.js"> </script>
+        3）<script type="text/javascript" charset="utf-8" src="lang/zh-cn/zh-cn.js"></script>
+4、些一个表单，实现文本区域框和ueditor融合，并设置相应的高度和宽度，并加入script脚本，获取ue对象，文本区域框的id必须和UE.getEditor括号中的参数保持一致
+    <textarea id="editor" style="height:400px;width:1000px"></textarea>
+    <script type="text/javascript">
+        var ue = UE.getEditor('editor');
+    </script>
+5、运行界面，效果就出来了，可上传单张，或多张
+6、开始连接数据库，采用jsp+servlet方式，当然可以使用maven项目，配置mysql的jar包文件（本人采用的是idea编译器，连接mysql保存数据）
+7、建立相对于的包，存放javabean、servlet、数据库连接类、sql操作类（sql参照documents下的ueditor.sql文件）
+8、导入mysql的jar包，本项目是5.1.3的jar包，测试连接，本项目中的sqlcon包下面的MysqlConnection类（放开注释测试，更改用户名驱动，密码，url，可以改用其他的连接方式）
+9、导入js、css文件，相应的前台框架
