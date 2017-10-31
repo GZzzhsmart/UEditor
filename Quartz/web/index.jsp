@@ -5,7 +5,7 @@
 <html>
   <head>
     <title>QQ登录</title>
-    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101438242" data-redirecturi="http://localhost:8080/index.jsp" charset="utf-8"></script>
+    <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101439324" data-redirecturi="http://localhost:8080/index.jsp" charset="utf-8"></script>
   </head>
   <body>
   <span id="qqLoginBtn"></span>
