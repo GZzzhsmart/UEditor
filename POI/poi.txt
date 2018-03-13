@@ -1,0 +1,33 @@
+1、工作薄(Workbook)
+    工作表(Sheet)
+    行（Row）
+    单元格（Cell）
+
+    数值（numeric)
+    字符串(string)
+    日期时间（date)
+    布尔类型(boolean)
+    富文本类型(rich string)
+
+    行索引：从0开始
+    列索引：从0开始
+
+2、POI
+    POI老版本：
+    工作薄：HSSFWorkbook
+    工作表：HSSFSheet
+    行：HSSFRow
+    单元格：HSSFCell
+
+    POI新版本：
+    工作薄：XSSFWorkbook
+    工作表：XSSFSheet
+    行：XSSFRow
+    单元格：XSSFCell
+
+3、单元格样式
+    1)对齐模式
+    2）文本字体，字体大小，字体颜色
+    3）背景色
+    4）边框
+    5）时间日期格式
