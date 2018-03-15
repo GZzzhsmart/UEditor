@@ -1,6 +1,5 @@
 package com.ht.common;
 
-
 import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;

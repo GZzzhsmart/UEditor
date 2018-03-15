@@ -1,6 +1,5 @@
 package com.ht.common;
 
-
 import org.quartz.JobDetail;
 import org.quartz.Scheduler;
 import org.quartz.SchedulerException;
@@ -8,7 +7,6 @@ import org.quartz.SimpleTrigger;
 import org.quartz.impl.JobDetailImpl;
 import org.quartz.impl.StdSchedulerFactory;
 import org.quartz.impl.triggers.SimpleTriggerImpl;
-
 import java.util.Date;
 
 public class QuartzTest {
@@ -22,6 +20,7 @@ public class QuartzTest {
             e.printStackTrace();
         }
     }
+
     protected void startScheduler() throws SchedulerException {
         Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
         JobDetail jobDetail =new JobDetailImpl("testJob", Scheduler.DEFAULT_GROUP, MyJob.class);
@@ -32,4 +31,6 @@ public class QuartzTest {
         scheduler.scheduleJob(jobDetail, trigger);
         scheduler.start();
     }
+
+
 }

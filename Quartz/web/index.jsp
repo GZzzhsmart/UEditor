@@ -2,6 +2,9 @@
 <%
     String path = request.getContextPath();
 %>
+<%--APP ID：101439324--%>
+<%--APP Key：1d9623a09a4d507e7fa143c80cd437ae--%>
+
 <html>
   <head>
     <title>QQ登录</title>

@@ -30,6 +30,7 @@
         <property name="targetMethod" value="run" />
     </bean>
 
+
     <bean id="cacheClearJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
         <property name="name" value="cacheClearJobTrigger" />
         <property name="group" value="group1" />
@@ -51,5 +52,6 @@
             </list>
         </property>
     </bean>
+
 
 </beans>
